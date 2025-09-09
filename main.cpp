@@ -86,14 +86,15 @@ int main(){
         
         if (opcao != '1' && opcao != '2') // verifica se o usuario digitou algo diferente entre 1 ou 2
         {
-            printf("Opcao invalida! Digite 1 ou 2.\n");
             while (opcao != '1' && opcao != '2') // enquanto for diferente de 1 ou 2, fica em loop
             {
+                printf("Opcao invalida! Digite 1 ou 2.\n");
                 printf("Deseja continuar calculando IMC? \n");
                 printf("1 - Sim, quero continuar calculando!\n2 - Nao, quero sair! \n");
                 scanf(" %c", &opcao);
             }
-        } else if (opcao == '2') // opcao de saida do loop
+        }
+        if (opcao == '2') // opcao de saida do loop
         {
             printf("-----------------------------------------\n\n");
             printf("Saindo da calculadora....\n");
@@ -101,9 +102,9 @@ int main(){
             media =  somaIMC / contadorPessoas;
             printf("Media geral dos IMCS foi de: %.2f\n\n", media);
             estaCalculando = false;
+            break;
         }
-        
-        
+          
     }
     
     printf("-----------------------------------------\n\n");
